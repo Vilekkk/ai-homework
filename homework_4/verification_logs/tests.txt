@@ -1,0 +1,7 @@
+
+ RUN  v2.1.9 <project>
+
+ ✓ src/__tests__/useTasks.test.ts (15 tests) 30ms
+ ✓ src/__tests__/TaskFilters.test.tsx (4 tests) 39ms
+ ✓ src/__tests__/AddTaskModal.test.tsx (5 tests) 173ms
+ ✓ src/__tests__/App.test.tsx (3 tests) 205ms
