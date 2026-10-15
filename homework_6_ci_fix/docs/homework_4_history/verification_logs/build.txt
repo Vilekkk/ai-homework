@@ -1,0 +1,17 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> vite-react-typescript-starter@0.0.0 build
+> vite build
+
+vite v5.4.8 building for production...
+transforming...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 1576 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.97 kB │ gzip:  0.48 kB
+dist/assets/index-CFSUD0hm.css   16.55 kB │ gzip:  3.92 kB
+dist/assets/index-D_48FoTO.js   164.54 kB │ gzip: 52.42 kB
+✓ built in 2.67s
