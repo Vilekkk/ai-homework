@@ -1,0 +1,17 @@
+node_modules
+dist
+coverage
+*.local
+.env
+.env.*
+!.env.example
+supabase/migrations
+.vscode
+.idea
+.DS_Store
+.gigaide
+.gigacode
+.bolt
+
+# SQL is checked separately; Prettier has no SQL parser installed.
+supabase/**/*.sql
