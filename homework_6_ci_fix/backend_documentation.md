@@ -226,18 +226,18 @@ Backend развёрнут в Supabase; запуск frontend локальный
 
 ## Подтверждения практической работы
 
-![Миграция выполнена](screenshots/hw5/07_migration_applied_success.png)
+![Миграция выполнена](../screenshots/hw5/07_migration_applied_success.png)
 
-![Создание задачи в PostgreSQL](screenshots/hw5/24_created_task_in_postgresql.png)
+![Создание задачи в PostgreSQL](../screenshots/hw5/24_created_task_in_postgresql.png)
 
-![Изменение completed в PostgreSQL](screenshots/hw5/26_task_completed_db.png)
+![Изменение completed в PostgreSQL](../screenshots/hw5/26_task_completed_db.png)
 
-![После удаления осталась одна запись](screenshots/hw5/29_delete_confirmed_postgresql.png)
+![После удаления осталась одна запись](../screenshots/hw5/29_delete_confirmed_postgresql.png)
 
-![Windows: 26 тестов и успешная сборка до контрольных правок](screenshots/hw5/30_windows_tests_and_build_success.png)
+![Windows: 26 тестов и успешная сборка до контрольных правок](../screenshots/hw5/30_windows_tests_and_build_success.png)
 
-![Итоговый прогон исправленной версии Windows](screenshots/hw5/31_windows_final_31_tests_build.png)
+![Итоговый прогон исправленной версии Windows](../screenshots/hw5/31_windows_final_31_tests_build.png)
 
-![Supabase Logs после повторного входа](screenshots/hw5/33_logs_after_signin_get_200.png)
+![Supabase Logs после повторного входа](../screenshots/hw5/33_logs_after_signin_get_200.png)
 
-![Проверка прав через SQL: три true](screenshots/hw5/34_sql_rls_all_true.png)
+![Проверка прав через SQL: три true](../screenshots/hw5/34_sql_rls_all_true.png)

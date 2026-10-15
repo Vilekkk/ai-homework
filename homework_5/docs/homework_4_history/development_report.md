@@ -45,9 +45,9 @@
 после настройки окружения агент сообщил об успешном npm ci. Итоговые
 тесты и production-сборку я отдельно подтвердила прямыми командами Node.
 
-![frontend_project_open](screenshots/frontend_project_open.png)
+![frontend_project_open](../../screenshots/frontend_project_open.png)
 
-![initial_audit_2](screenshots/initial_audit_2.png)
+![initial_audit_2](../../screenshots/initial_audit_2.png)
 
 ## 4. Реализация и рефакторинг с AI
 
@@ -121,9 +121,9 @@ Duration    102.30s
 промежуточной установке npm также сообщил о 33 уязвимостях зависимостей;
 отдельный аудит после доработки и устранение этих предупреждений не проводились.
 
-![manual_build_success](screenshots/manual_build_success.png)
+![manual_build_success](../../screenshots/manual_build_success.png)
 
-![vitest_13_passed](screenshots/vitest_13_passed.png)
+![vitest_13_passed](../../screenshots/vitest_13_passed.png)
 
 ## 7. Проверка интерфейса и адаптивности
 
@@ -159,13 +159,13 @@ Vite сообщил ready in 341 ms и адрес http://localhost:5173/.
 дополнительная полировка переноса текста остаётся рекомендацией.
 Проверка выполнена в эмуляторе, а не на физическом телефоне.
 
-![desktop_local_app](screenshots/desktop_local_app.png)
+![desktop_local_app](../../screenshots/desktop_local_app.png)
 
-![mobile_360x800](screenshots/mobile_360x800.png)
+![mobile_360x800](../../screenshots/mobile_360x800.png)
 
-![mobile_add_form](screenshots/mobile_add_form.png)
+![mobile_add_form](../../screenshots/mobile_add_form.png)
 
-![mobile_task_added](screenshots/mobile_task_added.png)
+![mobile_task_added](../../screenshots/mobile_task_added.png)
 
 ## 8. Примеры применённых промптов
 
@@ -262,7 +262,7 @@ npm.cmd run build
 
 Требования из ДЗ 3 сохранены в `requirements/`. Для ДЗ 4 реализован локальный
 frontend; сервер и аккаунты не подключались. Правила ДЗ 2 адаптированы к
-React/TypeScript в [frontend_rules.md](frontend_rules.md). Исходные правила
+React/TypeScript в [frontend_rules.md](../../frontend_rules.md). Исходные правила
 про Python, SQLAlchemy и Swagger не применяются буквально к браузерному коду.
 Адаптация включена при финальной доработке, без утверждения, что этот файл
 существовал до первоначальной генерации Bolt.
@@ -320,7 +320,7 @@ Duration    3.43s
 Скриншот ниже относится к окончательной версии, а прежний снимок с
 13 тестами — к предыдущему этапу разработки.
 
-![Финальный прогон 27 тестов на Windows](screenshots/vitest_27_passed_windows.png)
+![Финальный прогон 27 тестов на Windows](../../screenshots/vitest_27_passed_windows.png)
 
 При установке npm сообщил о 36 уязвимостях зависимостей.
 Их анализ и устранение отдельно не выполнялись.
@@ -332,7 +332,7 @@ Duration    3.43s
 сервер готов за 249 мс, адрес http://localhost:5173/.
 Предупреждение Browserslist осталось, ошибок сборки нет.
 
-![Финальная сборка и запуск](screenshots/final_build_dev_windows.png)
+![Финальная сборка и запуск](../../screenshots/final_build_dev_windows.png)
 
 ## 14. Открытие окончательного приложения
 
@@ -341,7 +341,7 @@ Duration    3.43s
 приоритета, кнопка добавления. Показано 7 задач: 5 активных и 2 выполненные.
 Это скриншот окончательной версии после исправлений.
 
-![Окончательная версия приложения](screenshots/final_desktop_windows.png)
+![Окончательная версия приложения](../../screenshots/final_desktop_windows.png)
 
 Итог: окончательный проект запускается на Windows, production-сборка
 завершается успешно, 27 автоматических тестов проходят. Исходники, инструкции,

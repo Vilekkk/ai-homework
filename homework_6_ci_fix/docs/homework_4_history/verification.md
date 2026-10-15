@@ -62,7 +62,7 @@ Vitest 2.1.9: **Test Files 4 passed (4), Tests 27 passed (27), Duration 3.43s**.
 полный успешный прогон окончательной версии на Windows, несмотря на
 ограничение контрольной Linux-среды, описанное выше.
 
-![27 тестов прошли на Windows](screenshots/vitest_27_passed_windows.png)
+![27 тестов прошли на Windows](../../../screenshots/vitest_27_passed_windows.png)
 
 Установка через `npm.cmd ci` заняла 5 минут, добавлено 378 пакетов.
 В текущем терминале предварительно установлен корректный ComSpec:
@@ -100,6 +100,6 @@ npm.cmd run dev
 Окончательная версия открыта в Chrome по адресу localhost:5173: показаны
 таблица, фильтры, кнопка добавления и счётчики 7/5/2.
 
-![Окончательный интерфейс на компьютере](screenshots/final_desktop_windows.png)
+![Окончательный интерфейс на компьютере](../../../screenshots/final_desktop_windows.png)
 
-![Сборка и dev-сервер на Windows](screenshots/final_build_dev_windows.png)
+![Сборка и dev-сервер на Windows](../../../screenshots/final_build_dev_windows.png)

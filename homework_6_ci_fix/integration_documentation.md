@@ -3,8 +3,9 @@
 ## Текущий этап
 
 Подготовлена часть шага 1: локальные проверки и workflow GitHub Actions.
-Фактический запуск workflow на GitHub, автоматический деплой и тестовый
-коммит ещё не выполнены. OAuth2, аналитика, аудит и исправление зависимостей,
+Первый запуск workflow на GitHub состоялся: установка, typecheck и lint
+прошли, форматирование потребовало исправления. Автоматический деплой
+ещё не настроен. OAuth2, аналитика, аудит и исправление зависимостей,
 мониторинг, Health Check, алерты, JSON-логи и оптимизация — следующие этапы.
 Платежи в задании опциональны.
 
@@ -12,20 +13,20 @@
 
 Репозиторий: https://github.com/Vilekkk/ai-homework.
 
-| Путь в репозитории                      | Назначение                           |
-| --------------------------------------- | ------------------------------------ |
-| .github/workflows/ci.yml                | Workflow в корне репозитория         |
-| homework_6/package.json                 | Зависимости и команды приложения     |
-| homework_6/package-lock.json            | Воспроизводимая установка npm ci     |
-| homework_6/.prettierrc                  | Настройки форматирования приложения  |
-| homework_6/.prettierignore              | Исключения форматирования приложения |
-| homework_6/integration_documentation.md | Этот документ                        |
+| Путь в репозитории                             | Назначение                           |
+| ---------------------------------------------- | ------------------------------------ |
+| .github/workflows/ci.yml                       | Workflow в корне репозитория         |
+| homework_6_ci_fix/package.json                 | Зависимости и команды приложения     |
+| homework_6_ci_fix/package-lock.json            | Воспроизводимая установка npm ci     |
+| homework_6_ci_fix/.prettierrc                  | Настройки форматирования приложения  |
+| homework_6_ci_fix/.prettierignore              | Исключения форматирования приложения |
+| homework_6_ci_fix/integration_documentation.md | Этот документ                        |
 
-Конфигурации Prettier остаются рядом с package.json внутри homework_6.
+Конфигурации Prettier остаются рядом с package.json внутри homework_6_ci_fix.
 Их не нужно переносить в корень репозитория. Это сохраняет одинаковую
 область проверки и локально, и в CI. Workflow копируется в корневую
-.github/workflows; вложенный homework_6/.github/workflows GitHub не запускает.
-Локальная копия пока может называться homework_5: важен путь homework_6
+.github/workflows; вложенный homework_6_ci_fix/.github/workflows GitHub не запускает.
+Локальная копия пока может называться homework_5: важен путь homework_6_ci_fix
 после загрузки на GitHub. Название окна IDE само по себе не меняет поведение.
 
 ## Pipeline
@@ -33,8 +34,8 @@
 GitHub Actions запускает установку, затем последовательно typecheck, lint,
 format:check, test:run и build. Триггеры: push в main, pull_request в main,
 ручной workflow_dispatch. ОС ubuntu-latest; Node.js 24.x.
-Все run-команды выполняются с working-directory homework_6;
-cache-dependency-path homework_6/package-lock.json. Разрешение токена
+Все run-команды выполняются с working-directory homework_6_ci_fix;
+cache-dependency-path homework_6_ci_fix/package-lock.json. Разрешение токена
 ограничено contents:read; предыдущий запуск той же ветки можно отменить
 через concurrency. Модульные тесты подменяют API и не обращаются к реальной БД.
 
@@ -84,11 +85,12 @@ ChatGPT для проверки. Причина: добавленные _event/_
 
 ESLint и TypeScript проверены в контрольной Linux-среде ChatGPT успешно.
 Результаты контрольных проверок записаны отдельно в ci_verification.md.
-Итоговый полный прогон на Windows и запуск GitHub Actions ещё предстоят.
+Итоговый Windows-прогон подтверждён: 31/31 тест, 4.67s; сборка 3.84s.
+Первый запуск GitHub Actions потребовал исправления форматирования.
 
 ## Что проверять на GitHub
 
-После загрузки приложения в homework_6 и workflow в корень выполнить
+После загрузки приложения в homework_6_ci_fix и workflow в корень выполнить
 тестовый коммит в main. Во вкладке Actions открыть Homework 6 CI и проверить
 все этапы. Зелёный CI подтверждает проверки, но сам по себе не является
 подтверждением деплоя: шаг deploy пока отсутствует.
@@ -108,3 +110,15 @@ typescript-eslint о TypeScript 5.6.3 в текущем Windows-окружени
 Далее подключаются хостинг и deploy после успешных проверок, OAuth2,
 аналитика, мониторинг с алертами и Health Check, структурированные логи.
 Фактические настройки и результаты будут дописаны после выполнения.
+
+## Фактическая загрузка на GitHub
+
+Приложение загружено в homework_6_ci_fix, четыре файла настроек находятся
+внутри этой папки. Workflow создан в корневой .github/workflows/ci.yml
+с working-directory homework_6_ci_fix и соответствующим cache-dependency-path.
+Первый запуск от push выполнил установку, проверку типов и lint;
+форматирование двух Markdown-файлов потребовало правки. Успешное завершение
+всего CI пока не подтверждено. Деплой ещё не настроен.
+
+Фотографии загружены в общую корневую screenshots. Относительные ссылки
+в документах ДЗ 6 скорректированы к этой папке, повторная загрузка не нужна.
